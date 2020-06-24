@@ -14,7 +14,21 @@ export class CurrentWeatherComponent implements OnInit {
   constructor(private weatherService: WeatherService ) { }
 
   ngOnInit(): void {
-    this.localWeather = this.weatherService.weatherTest();
+    navigator.geolocation.getCurrentPosition((post) => {
+      this.location = post.coords;
+      const lat = this.location.latitude;
+      const lon = this.location.longitude;
+      this.weatherService.localWeather(lat, lon).subscribe((data: any) => {
+        this.localWeather = {
+          cityName: data.name,
+          temp: data.main.temp,
+          icon: data.weather[0].icon,
+          weatherKind: data.weather[0].description,
+          tempMax: data.main.temp_max,
+          tempMin: data.main.temp_min
+        };
+      });
+    });
   }
 
 }

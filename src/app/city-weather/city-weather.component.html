@@ -1,1 +1,11 @@
-<p>city-weather works!</p>
+<input type="text" [(ngModel)]="cityName" placeholder="See the weather of the city">
+<button (click)="showCityWeather()">See</button>
+<ng-container *ngIf="showInfoCity == true">
+<p>City name: {{cityWeather.cityName}}</p>
+<p><img src="https://openweathermap.org/img/wn/{{cityWeather.icon}}.png" alt="Loading img..."/></p>
+<p>Temp now: {{cityWeather.temp}}</p>
+<p>Temp max: {{cityWeather.tempMax}}</p>
+<p>Temp min: {{cityWeather.tempMin}}</p>
+<p>Weather kind: {{cityWeather.weatherKind}}</p>
+</ng-container>
+
