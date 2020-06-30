@@ -1,0 +1,12 @@
+<div *ngIf="!localForecastWeather">Loading....</div>
+<div *ngIf="localForecastWeather">
+  <div *ngFor="let item of localForecastWeather.list; index as i">
+    <p>{{item.dt_txt}}</p>
+    <p>{{item.main.temp}}</p>
+    <p>{{item.main.temp_max}}</p>
+    <p>{{item.main.temp_min}}</p>
+    <p><img src="https://openweathermap.org/img/wn/{{item.weather[0].icon}}.png" alt="Loading img..."/></p>
+    <p>{{item.wind.speed}}</p>
+    <hr>
+  </div>
+</div>

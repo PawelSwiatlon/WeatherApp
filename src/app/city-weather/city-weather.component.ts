@@ -11,13 +11,11 @@ import { WeatherService } from '../weather.service';
 export class CityWeatherComponent implements OnInit {
   cityName: string;
   cityWeather: WeatherInteface;
-  showInfoCity = false;
   constructor(private weaterService: WeatherService) { }
 
   ngOnInit(): void {
   }
   showCityWeather(){
-    this.showInfoCity = true;
     this.weaterService.showCityWeather(this.cityName).subscribe((data: any) => {
       this.cityWeather = {
         cityName: data.name,
