@@ -8,13 +8,15 @@ import { CurrentWeatherComponent } from './current-weather/current-weather.compo
 import { WeatherService } from './weather.service';
 import { CityWeatherComponent } from './city-weather/city-weather.component';
 import { ForecastWeatherComponent } from './forecast-weather/forecast-weather.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CurrentWeatherComponent,
     CityWeatherComponent,
-    ForecastWeatherComponent
+    ForecastWeatherComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

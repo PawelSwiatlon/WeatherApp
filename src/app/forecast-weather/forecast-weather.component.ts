@@ -10,9 +10,7 @@ import { WeatherService } from '../weather.service';
 export class ForecastWeatherComponent implements OnInit {
   localForecastWeather;
   location;
-  constructor(private weatherService: WeatherService) {
-
-   }
+  constructor(private weatherService: WeatherService) {}
 
   ngOnInit(): void {
     navigator.geolocation.getCurrentPosition((post) => {

@@ -1,0 +1,17 @@
+<div class="nav-bar">
+  <h2>Weather App</h2>
+  <div class="hamburger" (click)="showMenuItems()">
+    <p></p>
+    <p></p>
+    <p></p>
+  </div>
+  <div class="nav-items" [class]="showMenuItem? 'open-menu':'close-menu' ">
+    <div class="hamburger-close" (click)="showMenuItems()">
+      <p></p>
+      <p></p>
+    </div>
+    <p>Home</p>
+    <p>Information</p>
+    <p>Contact</p>
+  </div>
+</div>
