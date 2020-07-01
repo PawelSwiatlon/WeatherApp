@@ -5,7 +5,12 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 15px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Roboto Mono', monospace;
+}
+.logo {
+  font-size: 26px;
+  color: whitesmoke;
+  text-shadow: 0 2px 5px black;
 }
 .hamburger {
   width: 25px;
@@ -15,7 +20,8 @@
   justify-content: space-around;
 }
 .hamburger p {
-  background-color: black;
+  background-color: whitesmoke;
+  box-shadow: 0 2px 5px black;
 }
 .hamburger p:nth-child(1) {
   width: 60%;

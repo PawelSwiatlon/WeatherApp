@@ -13,12 +13,20 @@ import { MenuComponent } from './menu/menu.component';
 import { StatisticWeatherComponent } from './statistic-weather/statistic-weather.component';
 import { InformationComponent } from './information/information.component';
 import { ContactComponent } from './contact/contact.component';
-const appRout = [
-  {path: '', component: StatisticWeatherComponent},
-  {path: 'information', component: InformationComponent},
-  {path: 'contact', component: ContactComponent},
-  {path: '*', component: StatisticWeatherComponent}
+
+const appRout: Routes = [
+  { path: '', redirectTo: 'home/location', pathMatch: 'full' },
+  { path: 'home', redirectTo: 'home/location', pathMatch: 'full' },
+  { path: 'home', component: StatisticWeatherComponent,
+    children: [
+      { path: 'location', component: CurrentWeatherComponent },
+      { path: 'city', component: CityWeatherComponent }
+    ]
+  },
+  { path: 'information', component: InformationComponent},
+  { path: 'contact', component: ContactComponent }
 ];
+
 @NgModule({
   declarations: [
     AppComponent,

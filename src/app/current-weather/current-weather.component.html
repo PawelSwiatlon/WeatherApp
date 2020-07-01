@@ -1,10 +1,20 @@
 <div *ngIf="!localWeather">Loading....</div>
 <div *ngIf="localWeather">
-
-  <p>City name: {{localWeather.cityName}}</p>
-  <p><img src="https://openweathermap.org/img/wn/{{localWeather.icon}}.png" alt="Loading img..."/></p>
-  <p>Temp now: {{localWeather.temp}}</p>
-  <p>Temp max: {{localWeather.tempMax}}</p>
-  <p>Temp min: {{localWeather.tempMin}}</p>
-  <p>Weather kind: {{localWeather.weatherKind}}</p>
+  <div class="box">
+    <p class="city"><img src="../../assets/img/location.svg" alt="">{{localWeather.cityName}}</p>
+    <p class="skyInfo">{{localWeather.weatherKind}}</p>
+    <p class="icon">
+      <img src="https://openweathermap.org/img/wn/{{localWeather.icon}}.png" alt="Loading img..."/>
+      <span>{{localWeather.temp}}°</span>
+    </p>
+  </div>
+  <div class="temp-info">
+    <p>Max: {{localWeather.tempMax}}°</p>
+    <p></p>
+    <p>Min: {{localWeather.tempMin}}°</p>
+  </div>
+  <p class="forecast_text">Forecast weather</p>
+  <div class="forecast">
+    <app-forecast-weather></app-forecast-weather>
+  </div>
 </div>
