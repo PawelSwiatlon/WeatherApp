@@ -10,8 +10,22 @@
       <p></p>
       <p></p>
     </div>
-    <p routerLink="home">Home</p>
-    <p routerLink="information">Information</p>
-    <p routerLink="contact">Contact</p>
+    <div class="items">
+      <p routerLink="home"
+         routerLinkActive="active"
+         (click)="showMenuItems()">
+         Home
+      </p>
+      <p routerLink="information"
+         routerLinkActive="active"
+         (click)="showMenuItems()">
+         Information
+      </p>
+      <p routerLink="contact"
+         routerLinkActive="active"
+         (click)="showMenuItems()">
+         Contact
+      </p>
+    </div>
   </div>
 </div>

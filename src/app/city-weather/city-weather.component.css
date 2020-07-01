@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: whitesmoke;
+}
+.city_name {
+  width: 100%;
+  margin: 30px 0;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+}
+input {
+  padding: 5px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  color: black;
+}
+button {
+  border: none;
+  border-radius: 0 5px 5px 0;
+  padding: 5px;
+  color: black;
+}
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.city {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon img {
+  width: 70px;
+}
+.icon span {
+  font-size: 60px;
+}
+.city img {
+  width: 15px;
+  margin-right: 5px;
+}
+.skyInfo {
+  opacity: 0.6;
+}
+.temp-info {
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+  margin: auto;
+  opacity: 0.8;
+  background-color: #8ec5f7;
+  padding: 5px;
+  border-radius: 10px;
+}
+.temp-info p:nth-child(2) {
+  border-right: 1px solid whitesmoke;
+}
+.temp-info p {
+  padding: 5px;
+}
