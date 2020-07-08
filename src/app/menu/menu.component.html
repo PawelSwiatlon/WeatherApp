@@ -5,27 +5,44 @@
     <p></p>
     <p></p>
   </div>
-  <div class="nav-items" [class]="showMenuItem? 'open-menu':'close-menu' ">
+  <div class="nav-items-mobile" [class]="showMenuItem? 'open-menu':'close-menu' ">
     <div class="hamburger-close" (click)="showMenuItems()">
       <p></p>
       <p></p>
     </div>
     <div class="items">
       <p routerLink="home"
-         routerLinkActive="active"
-         (click)="showMenuItems()">
-         Home
+        routerLinkActive="active"
+        (click)="showMenuItems()">
+        Home
       </p>
       <p routerLink="information"
-         routerLinkActive="active"
-         (click)="showMenuItems()">
-         Information
+        routerLinkActive="active"
+        (click)="showMenuItems()">
+        Information
       </p>
       <p routerLink="contact"
-         routerLinkActive="active"
-         (click)="showMenuItems()">
-         Contact
+        routerLinkActive="active"
+        (click)="showMenuItems()">
+        Contact
       </p>
     </div>
+  </div>
+  <div class="nav-items-desktope">
+    <p routerLink="home"
+        routerLinkActive="active"
+        (click)="showMenuItems()">
+        Home
+      </p>
+      <p routerLink="information"
+        routerLinkActive="active"
+        (click)="showMenuItems()">
+        Information
+      </p>
+      <p routerLink="contact"
+        routerLinkActive="active"
+        (click)="showMenuItems()">
+        Contact
+      </p>
   </div>
 </div>

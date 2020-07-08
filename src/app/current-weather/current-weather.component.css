@@ -63,4 +63,39 @@
   height: 500px;
   overflow-y: scroll;
 }
+.city-desktope {
+  display: none;
+}
+.stat-box {
+  display: flex;
+  justify-content: space-between;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+@media only screen and (min-width: 786px) {
+  .temp-info {
+    width: 30%;
+  }
+  .forecast_text {
+    margin-left: 2%;
+  }
+  .forecast {
+    width: 40%;
+  }
+  .city-desktope {
+    display: block;
+    width: 60%;
+    text-align: center;
 
+  }
+}
