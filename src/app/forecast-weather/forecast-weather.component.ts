@@ -10,6 +10,7 @@ import { WeatherService } from '../weather.service';
 export class ForecastWeatherComponent implements OnInit {
   localForecastWeather;
   location;
+  permissionDenied = false;
   constructor(private weatherService: WeatherService) {}
 
   ngOnInit(): void {
@@ -20,7 +21,13 @@ export class ForecastWeatherComponent implements OnInit {
       this.weatherService.localForecastWeather(lat, lon).subscribe((data) => {
         this.localForecastWeather = data;
       });
-    });
+    }, (e) => {
+      if(e.code === e.PERMISSION_DENIED){
+        this.permissionDenied = true;
+      }
+      console.log("test");
+    }
+    );
   }
 
 }

@@ -1,26 +1,31 @@
-<div *ngIf="!localWeather">Loading....</div>
-<div *ngIf="localWeather">
-  <div class="box">
-    <p class="city"><img src="../../assets/img/location.svg" alt="">{{localWeather.cityName}}</p>
-    <p class="skyInfo">{{localWeather.weatherKind}}</p>
-    <p class="icon">
-      <img src="https://openweathermap.org/img/wn/{{localWeather.icon}}.png" alt="Loading img..."/>
-      <span>{{localWeather.temp}}°</span>
-    </p>
-  </div>
-  <div class="temp-info">
-    <p>Max: {{localWeather.tempMax}}°</p>
-    <p></p>
-    <p>Min: {{localWeather.tempMin}}°</p>
-  </div>
-  <p class="forecast_text">Forecast weather</p>
-  <div class="stat-box">
-    <div class="forecast">
-      <app-forecast-weather></app-forecast-weather>
+<div *ngIf="permissionDenied == true">
+  <h1 class="error_location">please allow location permission</h1>
+</div>
+<div *ngIf="permissionDenied == false">
+  <div *ngIf="!localWeather">Loading....</div>
+  <div *ngIf="localWeather">
+    <div class="box">
+      <p class="city"><img src="../../assets/img/location.svg" alt="">{{localWeather.cityName}}</p>
+      <p class="skyInfo">{{localWeather.weatherKind}}</p>
+      <p class="icon">
+        <img src="https://openweathermap.org/img/wn/{{localWeather.icon}}.png" alt="Loading img..."/>
+        <span>{{localWeather.temp}}°</span>
+      </p>
     </div>
-    <div class="city-desktope">
-      <p>Current city weather</p>
-      <app-city-weather></app-city-weather>
+    <div class="temp-info">
+      <p>Max: {{localWeather.tempMax}}°</p>
+      <p></p>
+      <p>Min: {{localWeather.tempMin}}°</p>
+    </div>
+    <p class="forecast_text">Forecast weather</p>
+    <div class="stat-box">
+      <div class="forecast">
+        <app-forecast-weather></app-forecast-weather>
+      </div>
+      <div class="city-desktope">
+        <p>Current city weather</p>
+        <app-city-weather></app-city-weather>
+      </div>
     </div>
   </div>
 </div>

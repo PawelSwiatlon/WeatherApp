@@ -11,6 +11,7 @@ import { WeatherService } from '../weather.service';
 export class CurrentWeatherComponent implements OnInit {
   localWeather: WeatherInteface;
   location;
+  permissionDenied = false;
   constructor(private weatherService: WeatherService ) { }
 
   ngOnInit(): void {
@@ -28,6 +29,10 @@ export class CurrentWeatherComponent implements OnInit {
           tempMin: data.main.temp_min
         };
       });
+    }, (e) => {
+      if(e.code === e.PERMISSION_DENIED){
+        this.permissionDenied = true;
+      }
     });
   }
 

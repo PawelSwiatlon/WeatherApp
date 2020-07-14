@@ -99,3 +99,10 @@
 
   }
 }
+.error_location {
+  margin-top: 50px;
+  width: 100%;
+  color: #F12B6B;
+  text-align: center;
+  text-transform: capitalize;
+}
